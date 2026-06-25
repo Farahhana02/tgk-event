@@ -1,0 +1,852 @@
+:root {
+  --green:#00542A;
+  --gold:#C08329;
+  --bg:#fff;
+}
+
+/* ============================================
+   BREADCRUMB
+============================================ */
+.breadcrumb-wrapper {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+
+    /* restore stable layout */
+    padding: 15px 0;
+    margin-bottom: 24px;
+}
+
+.breadcrumb-inner {
+  max-width: 1600px;
+  padding: 0 30px 0 70px;
+}
+
+.breadcrumb-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.breadcrumb-path {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #b5b5b5;
+}
+
+.breadcrumb-home-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.breadcrumb-link {
+  color: #b3b3b3;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  color: var(--green);
+}
+
+.breadcrumb-current {
+  color: #b5b5b5;
+  font-weight: 700;
+}
+
+/* ============================================================
+   PARTICIPATION INDEX
+=============================================================== */
+
+.pa-wrap {
+  padding: 22px 24px;
+}
+.pa-info-page {
+  max-width: 1200px;
+  margin-left: 70px;
+  margin-right: auto;
+}
+.pa-info-page .pa-grid-2 {
+  gap: 24px;
+}
+
+.pa-topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 6px 0 14px;
+}
+
+.pa-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pa-search-input-2 {
+  width: 360px;
+  padding: 10px 14px;
+  border: 2px solid var(--gold);
+  border-radius: 999px;
+  outline: none;
+  font-weight: 600;
+  text-transform: none;
+  background: #fff;
+  font-family: inherit;
+}
+
+.pa-search-input-2::placeholder {
+  color: #9CA3AF;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.pa-search-btn-2 {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background: var(--green);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.pa-search-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+.pa-search-btn-2:hover {
+  filter: brightness(0.95);
+}
+
+.pa-table-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #eef2f7;
+  overflow: hidden;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pa-table-scroll {
+  overflow-x: auto;
+}
+
+.pa-table-2 {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 820px;
+}
+
+.pa-table-2 thead th {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    border-bottom: 2px solid var(--green);
+    background-color: #f9f9f9;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.pa-table-2 tbody td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #eef2f7;
+    color: #111827;
+    font-weight: 500;
+    font-size: 13px;
+    vertical-align: middle;
+    height: auto;
+}
+
+.pa-programme-name {
+  font-weight: 900;
+  color: #111827;
+}
+
+.pa-center {
+  text-align: center;
+}
+
+.pa-col-bil       { width: 60px; }
+.pa-col-programme{ width: 340px; }
+.pa-col-date     { width: 130px; }
+.pa-col-time     { width: 140px; }
+.pa-col-venue    { width: 200px; }
+.pa-col-info     { width: 70px; }
+.pa-col-action   { width: 120px; }
+
+
+.pa-info-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 16px;
+  color: #1d4ed8;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+}
+
+.pa-info-btn:hover {
+  filter: brightness(0.96);
+}
+
+.pa-actions {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pa-action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 900;
+  text-decoration: none;
+  color: #111827;
+}
+
+.pa-action-btn.pa-edit {
+  background: #FCD34D;
+}
+
+.pa-action-btn.pa-delete {
+  background: #EF4444;
+  color: #fff;
+}
+
+.pa-action-btn:hover {
+  filter: brightness(0.95);
+}
+
+.pa-empty {
+  padding: 18px;
+  color: #6b7280;
+  text-align: left;
+}
+
+.pa-pagination {
+  margin-top: 14px;
+}
+
+.pa-fab {
+  position: fixed;
+  right: 28px;
+  bottom: 95px;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  z-index: 999;
+  border: none;
+  cursor: pointer;
+}
+
+.pa-fab:hover {
+  filter: brightness(0.95);
+}
+
+/* ============================================================
+   MODAL STYLES (MATCHING PROGRAMME DESIGN)
+=============================================================== */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-container {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #6B7280;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #F3F4F6;
+  color: #111827;
+}
+
+.modal-heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #374151;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.required {
+  color: #EF4444;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: #9CA3AF;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(0, 84, 42, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #F3F4F6;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  border: none;
+  background: #F3F4F6;
+  color: #374151;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-cancel:hover {
+  background: #E5E7EB;
+}
+
+.btn-save {
+  padding: 12px 24px;
+  border: none;
+  background: var(--green);
+  color: white;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-save:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 4px 12px rgba(0, 84, 42, 0.3);
+}
+
+/* ============================================================
+   INFO HUB CARDS
+=============================================================== */
+
+.pa-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pa-hub-card {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  display: block;
+  max-width: 520px;
+}
+
+.pa-hub-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--green);
+}
+
+.pa-hub-desc {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.pa-hub-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+}
+
+/* ============================================================
+   Responsive
+=============================================================== */
+
+@media (max-width: 768px) {
+  .modal-container {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .pa-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-topbar {
+    justify-content: stretch;
+  }
+
+  .pa-searchbar {
+    width: 100%;
+  }
+
+  .pa-search-input-2 {
+    width: 100%;
+  }
+}
+
+/* Center INFO & ACTION header + content */
+.pa-table-2 thead th.pa-col-info,
+.pa-table-2 thead th.pa-col-action,
+.pa-table-2 tbody td.pa-col-info,
+.pa-table-2 tbody td.pa-col-action {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+/* Make sure the button group sits perfectly centered */
+.pa-table-2 tbody td.pa-col-action .pa-actions {
+  width: 100%;
+  justify-content: center;
+}
+
+.pa-participant-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.pa-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pa-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.pa-btn-green {
+  background: var(--green);
+}
+
+.pa-btn-gold {
+  background: var(--gold);
+}
+
+.pa-filter {
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 2px solid #e5e7eb;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.pa-col-action {
+  width: 120px;
+  text-align: center;
+}
+
+/* ===============================
+   ALIGN TOPBAR WITH TABLE
+================================ */
+
+.pa-topbar {
+  max-width: 1550px;
+  margin: 0 auto 14px;
+  padding: 0 12px;
+}
+
+.pa-container {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+.pa-search-btn-2 {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--green);
+  background-image: url('/assets/icons/search.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  cursor: pointer;
+}
+
+/* PARTICIPANTS CELLS */
+.pa-participant-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+.pa-participant-position {
+  color: #6B7280;
+}
+
+/* Header alignment */
+.pa-table-2 thead th {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.pa-table-2 thead th.pa-center {
+  text-align: center;
+}
+
+/* PARTICIPANTS GROUP – clean vertical list */
+.pa-participant-name {
+  font-weight: 700;
+  color: #111827;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.pa-participant-position {
+  font-size: 12px;
+  color: #6B7280;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* PARTICIPANTS NESTED TABLE STYLE */
+.pa-participants-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 2px solid var(--green);
+}
+
+.pa-participants-table thead {
+  background: #f3f4f6;
+}
+
+.pa-participants-table thead th {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  border-right: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pa-participants-table thead th:last-child {
+  border-right: none;
+}
+
+.pa-participants-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pa-participants-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pa-participants-table tbody td {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #111827;
+  border-right: 2px solid #e5e7eb;
+  text-align: center;
+}
+
+.pa-participants-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.pa-participants-table tbody td:last-child {
+  border-right: none;
+}
+
+.pa-participants-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* PARTICIPANTS header group */
+.pa-table-2 thead th[colspan="2"] {
+  text-align: center;
+  border-bottom: 2px solid var(--green);
+}
+
+.pa-table-2 thead tr:last-child th {
+  font-size: 11px;
+  font-weight: 700;
+  color: #065f46;
+  background: #f3f4f6;
+}
+
+.pa-table-2 tbody tr {
+  border-bottom: 2px solid #e5e7eb;
+  height: auto;
+}
+
+.pa-status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.pa-status-pending {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.pa-status-approved {
+  background: #DCFCE7;
+  color: #065F46;
+}
+
+.pa-actions {
+  gap: 6px;
+}
+
+.pa-action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.pa-table-2 th:nth-child(8),
+.pa-table-2 th:nth-child(9),
+.pa-table-2 td:nth-child(8),
+.pa-table-2 td:nth-child(9) {
+  width: 160px;
+}
+
+/* =========================================
+   PARTICIPANTS COLUMN – FIXED WIDTH + NO WRAP
+========================================= */
+
+/* NAME – prevent wrapping */
+.pa-col-name,
+.pa-table-2 td.pa-col-name {
+    width: 360px;
+    max-width: 360px;
+    white-space: normal !important;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* POSITION – prevent wrapping */
+.pa-col-position,
+.pa-table-2 td.pa-col-position {
+    width: 180px;
+    max-width: 180px;
+    white-space: normal !important;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* TABLE NO – prevent wrapping */
+.pa-col-table,
+.pa-table-2 td.pa-col-table {
+    width: 90px;
+    max-width: 90px;
+    white-space: nowrap !important;
+    text-align: center;
+}
+
+/* Ensure participant row stays inline */
+.pa-participant-row {
+    display: block;
+    padding: 0;
+    line-height: 1.6;
+    white-space: normal;
+    margin: 0;
+}
+
+/* Keep table cell content on one line */
+.pa-table-2 tbody td {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Center PARTICIPANTS sub-headers */
+.pa-table-2 thead th.pa-col-name,
+.pa-table-2 thead th.pa-col-position,
+.pa-table-2 thead th.pa-col-table {
+    text-align: center !important;
+}
+
+/* Center TABLE NO values */
+.pa-table-2 tbody td.pa-col-table {
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+/* Keep NAME & POSITION content readable and left-aligned */
+.pa-table-2 tbody td.pa-col-name,
+.pa-table-2 tbody td.pa-col-position {
+    text-align: left;
+}
+/* FIX: Pagination arrow SVG too big */
+.pa-pagination svg {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  display: inline-block !important;
+}
+
+/* Make pagination buttons consistent */
+.pa-pagination a,
+.pa-pagination span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 34px !important;
+  min-width: 34px !important;
+}

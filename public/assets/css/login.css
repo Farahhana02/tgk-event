@@ -1,0 +1,163 @@
+/* ============================================
+   BREADCRUMB — OVERVIEW PAGE
+============================================ */
+
+.breadcrumb-wrapper {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+
+    /* FIXED SPACING — sits directly under topbar */
+    margin-top: 0 !important;
+    padding-top: 10px;  /* topbar is 60px, plus 10px spacing */
+    padding-bottom: 12px;
+}
+
+.breadcrumb-inner {
+    max-width: 1600px;
+    padding: 0 30px 0 70px;  /* PERFECT alignment with topbar */
+}
+
+/* Title */
+.breadcrumb-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* Breadcrumb Path */
+.breadcrumb-path {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b5b5b5;
+}
+
+/* Home Icon */
+.breadcrumb-home-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    transform: translateY(-1px);
+}
+
+/* Clickable breadcrumb links */
+.breadcrumb-link {
+    color: #b3b3b3;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: var(--green);
+}
+
+/* Current Page */
+.breadcrumb-current {
+    color: #b5b5b5;
+    font-weight: 700;
+}
+/* ============================================
+   LOGIN PAGE
+============================================ */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px 100px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 550px;
+
+    background: #f6f6f6;
+    border-radius: 14px;
+    padding: 40px 50px;
+
+    box-shadow: 12px 12px 22px rgba(0,0,0,0.12),
+                -8px -8px 18px rgba(255,255,255,0.55);
+}
+
+.login-title {
+    text-align: center;
+    font-size: 18px;
+    color: #3a3a3a;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--green);
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Input wrapper */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 16px 50px 16px 20px;
+    font-size: 15px;
+
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    background: #ffffff;
+
+    box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15),
+                inset -3px -3px 7px rgba(255,255,255,0.8);
+}
+
+/* Eye Icon */
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input-icon img {
+    width: 22px;
+    opacity: 0.55;
+}
+
+.input-icon:hover img {
+    opacity: 0.85;
+}
+
+/* Login Button */
+.login-btn {
+    width: 200px;
+    padding: 12px 0;
+    display: block;
+    margin: 20px auto 0;
+
+    background: var(--gold);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.login-btn:hover {
+    background: #ad6d22;
+    transform: translateY(-2px);
+}

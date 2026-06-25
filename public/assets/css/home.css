@@ -1,0 +1,774 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+/* ==== ROOT COLORS ==== */
+:root {
+  --green:#00542A;
+  --gold:#C08329;
+  --bg:#fff;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+a { 
+    text-decoration: none;
+    color: inherit; 
+}
+
+img {
+    user-select: none;
+}
+
+/* ============================
+   HEADER (TOPBAR)
+============================ */
+header {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+header.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 30px 0 25px;
+  border-bottom: 1px solid #eee;
+  z-index: 3000;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+    outline: none !important;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-btn span {
+    width: 22px;
+    height: 2px;
+    background: var(--green);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.menu-icon:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+
+.menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 5px); }
+.menu-btn.open span:nth-child(2) { opacity: 0; }
+.menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -5px); }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo img {
+    height: 34px !important;
+}
+.logo-name {
+  color: var(--green);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ============================
+   SIDEBAR
+============================ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  overflow-x: auto;
+  overflow-y: auto;
+  z-index: 5000;
+  padding-top: 80px;
+}
+
+.sidebar.open {
+  left: 0 !important;
+}
+
+/* Sidebar UL */
+.sidebar-menu {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Sidebar items */
+.sidebar-menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Sidebar links */
+.sidebar-menu a {
+    display: block;
+    padding: 12px 16px;
+    margin-left: 20px;
+    margin-top: 12px;
+    width: 80%;
+    color: var(--green);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background: transparent;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+/* Hover + active */
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background: #E6F2EA;
+  box-shadow: 6px 4px 4px rgba(0,0,0,0.12);
+  border-left: 3px solid var(--green);
+  transform: translateX(3px);
+}
+
+.sidebar-menu a:hover::before,
+.sidebar-menu a.active::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--green);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ============================
+   PREMIUM GOV DROPDOWN
+============================ */
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 14px 0px;
+    margin-top: 12px;
+    width: calc(100% - 40px); /* Sidebar width minus left margin */
+    margin-left: 20px;
+    cursor: pointer;
+
+    background: #fafafa;
+    border-radius: 6px;
+
+    border-left: 4px solid transparent;
+    transition: 0.2s ease;
+}
+/* Green line for main dropdown header */
+.dropdown-header::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--green);
+    border-radius: 0 4px 4px 0;
+    opacity: 1;
+}
+
+/* Keep your hover effect */
+.dropdown-header:hover {
+    background: #E6F2EA;
+    box-shadow: 6px 4px 4px rgba(0,0,0,0.12);
+    transform: translateX(3px);
+}
+
+/* When OPEN: premium green line */
+.dropdown-header.open {
+    background: #E6F2EA;
+    border-left: 4px solid var(--green);
+}
+
+/* Arrow — clean, no box */
+.dropdown-arrow {
+    background: none !important;   /* remove white box */
+    border: none !important;       /* remove border */
+    outline: none !important;
+    padding: 0 !important;         /* remove internal padding */
+    margin: 0 12px 0 0;            /* keep spacing */
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--green);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    transition: none !important;
+}
+
+
+.dropdown-arrow::before {
+    content: "▶";
+    font-weight: 700;
+}
+
+.dropdown-arrow.open::before {
+    content: "▼";
+}
+
+/* Dropdown Title */
+.dropdown-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+/* Submenu (Premium Style) */
+.dropdown-menu {
+    list-style: none;
+    display: none;
+
+    margin-top: 8px;
+    padding-left: 25px;
+
+    border-left: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+/* Show menu */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Submenu items — keep YOUR hover styling */
+.dropdown-menu a {
+    padding: 10px 14px;
+    display: block;
+    width: 70%;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--green);
+    border-left: 3px solid transparent;
+    transition: 0.25s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #E6F2EA;
+    border-left: 3px solid var(--green);
+    box-shadow: 4px 3px 4px rgba(0,0,0,0.15);
+    transform: translateX(3px);
+}
+
+/* ============================
+   OVERLAY
+============================ */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    z-index: 1800;
+}
+#overlay.show {
+    display: block;
+}
+
+/* Blur everything except sidebar */
+.blur-active {
+    filter: blur(3px) brightness(0.85);
+    transition: 0.3s ease;
+}
+.sidebar.blur-active { filter: none !important; }
+
+/* ============================
+   SOCIAL BAR — CLEAN + NO SPACE
+============================ */
+.social-bar {
+    position: fixed;
+    top: 150px;
+    right: 0; /* Flush to the right edge */
+    background: #0d5029;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -4px 0 18px rgba(0, 0, 0, 0.28);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 4001;
+    overflow: hidden; /* IMPORTANT - removes spacing & keeps shapes clean */
+}
+
+/* No spacing at all between icons */
+.social-bar a {
+    padding: 10px 12px; /* uniform padding */
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;   /* makes icons aligned perfectly */
+}
+
+/* Icon size */
+.social-bar img {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+/* Hover effect (optional premium feel) */
+.social-bar a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================
+   HERO SECTION
+====================
+======== */
+.hero {
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* transparent overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:none;    
+    z-index: 1;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay */
+  backdrop-filter: blur(2px);
+}
+
+/* Improved Hero Title */
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.05;
+    letter-spacing: 0px;
+    color:var(--bg); 
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    animation: fadeUp 1.8s ease-out forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+.cta-btn {
+  background: #C08329;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #a56d22;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background: #0D5029;
+    color: white;
+    flex-wrap: wrap;
+    position: relative;
+}
+.footer-col {
+    width: 25%;
+    min-width: 220px;
+}
+/* Keep footer section titles white */
+.footer-col h4 {
+    color: #ffffff !important;
+}
+
+/* Make only footer links gold */
+.footer-col a {
+    color: var(--gold) !important;
+}
+
+/* Optional: hover effect */
+.footer-col a:hover {
+    color: #e6b567 !important; /* slightly lighter gold */
+}
+
+.footer-col a.fundraiser-link {
+    color: #ffffff !important;     /* normal state = white */
+    font-weight: 700;
+    transition: color 0.25s ease;  /* smooth color fade */
+}
+
+.footer-col a.fundraiser-link:hover {
+    color: #6e6c6c !important;     /* soft light grey on hover */
+}
+
+.footer-bottom {
+    background: #083f1e;
+    text-align: center;
+    padding: 12px 0;
+    color: white;
+    font-weight: 610 !important; /* make footer text bold */
+}
+.footer-logo img {
+    width: 300px;      /* Adjust to the size you want */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.back-to-top {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+
+    transform: translateX(-50%); /* true center */
+
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    display: none;
+    z-index: 9999 !important;
+    transition: transform 0.2s ease;
+}
+
+.back-to-top svg {
+    width: 48px;
+    height: 48px;
+}
+
+.back-to-top:hover {
+     transform: translateX(-50%) translateY(-4px) scale(1.1);
+}
+
+/* ============================================================
+   UNIVERSAL RESET / RESPONSIVE BASE
+============================================================ */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HERO — BASE FIX */
+.hero {
+    height: 100vh !important;
+    min-height: 700px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-bg {
+    height: 100% !important;
+    z-index: 0 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* Topbar + footer stay above hero */
+.topbar{
+    z-index: 6000 !important;
+}
+.footer {
+    z-index: 3000 !important;
+}
+/* ============================================================
+   RESPONSIVE — SMALL PHONES (max-width: 360px)
+============================================================ */
+@media (max-width: 360px) {
+
+    .hero-title {
+        font-size: 32px !important;
+        line-height: 32px;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .footer {
+        padding: 15px 12px !important;
+    }
+
+    .footer-logo img {
+        width: 95px !important;
+    }
+
+    .footer-col a,
+    .footer-col p {
+        font-size: 13px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — PHONES (361px–480px)
+============================================================ */
+@media (max-width: 480px) {
+
+    /* HERO */
+    .hero-bg {
+        background-position: top center !important;
+    }
+
+    .hero-title {
+        font-size: 38px !important;
+        line-height: 40px;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+    }
+
+    /* SOCIAL BAR */
+    .social-bar a {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 20px 15px !important;
+        gap: 20px !important;
+    }
+
+    .footer-col h4 {
+        font-size: 17px !important;
+    }
+
+    .footer-col a,
+    .footer-col p {
+        font-size: 14px !important;
+    }
+
+    .footer-logo img {
+        width: 110px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL TABLETS / LARGE PHONES (481px–768px)
+============================================================ */
+@media (max-width: 768px) {
+
+    /* HERO TITLE */
+    .hero-title {
+        font-size: 55px !important;
+        line-height: 55px;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+    }
+
+    /* SOCIAL BAR */
+    .social-bar {
+        right: 10px !important;
+        bottom: 20px !important;
+        top: auto !important;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 30px 20px !important;
+        gap: 30px !important;
+    }
+
+    .footer-col,
+    .footer-logo {
+        width: 100% !important;
+        min-width: unset !important;
+        text-align: left !important;
+    }
+
+    .footer-logo img {
+        width: 130px !important;
+        margin-top: 20px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETS / MID DEVICES (769px–1024px)
+============================================================ */
+@media (max-width: 1024px) {
+
+    .footer {
+        padding: 30px 40px;
+        gap: 25px;
+    }
+
+    .footer-col {
+        width: 45% !important;
+        min-width: 200px;
+    }
+
+    .footer-logo img {
+        width: 180px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MID WIDTH DEVICES (Surface Duo, Tablets, 500px–900px)
+============================================================ */
+@media (max-width: 900px) and (min-width: 500px) {
+
+    .hero-bg {
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    .hero-title {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+    }
+}
+
+/* ============================================================
+   SIDEBAR FIX — PHONE ONLY
+============================================================ */
+@media (max-width: 450px) {
+
+    .sidebar {
+        width: 100% !important;
+        left: -100% !important;
+    }
+
+    .sidebar.open {
+        left: 0 !important;
+    }
+}
+/* ========================================
+   TABLETS & PHONES (≤ 768px)
+======================================== */
+@media (max-width: 768px) {
+    .social-bar {
+        top: auto;
+        bottom: 25px;
+
+        /* iPhone, Notch, DevTools fix */
+        right: calc(env(safe-area-inset-right) + 0px);
+    }
+}
+
+/* ========================================
+   SMALL PHONES (≤ 480px)
+======================================== */
+@media (max-width: 480px) {
+    .social-bar a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-bar img {
+        width: 17px;
+        height: 17px;
+    }
+
+    .social-bar {
+        bottom: 25px;
+    }
+}
+
+/* ========================================
+   VERY SMALL DEVICES (≤ 360px)
+======================================== */
+@media (max-width: 360px) {
+    .social-bar a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-bar img {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media(max-width:768px){
+  .hero-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto !important;
+}
+html, body {
+    overflow: visible !important;
+}

@@ -1,0 +1,729 @@
+/* ============================================
+   BREADCRUMB – OVERVIEW PAGE
+============================================ */
+
+.breadcrumb-wrapper {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+
+    /* FIXED SPACING – sits directly under topbar */
+    margin-top: 0 !important;
+    padding-top: 10px;  /* topbar is 60px, plus 10px spacing */
+    padding-bottom: 12px;
+}
+
+.breadcrumb-inner {
+    max-width: 1600px;
+    padding: 0 30px 0 70px;  /* PERFECT alignment with topbar */
+}
+
+/* Title */
+.breadcrumb-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* Breadcrumb Path */
+.breadcrumb-path {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b5b5b5;
+    text-transform: uppercase;
+}
+
+/* Home Icon */
+.breadcrumb-home-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    transform: translateY(-1px);
+}
+
+/* Clickable breadcrumb links */
+.breadcrumb-link {
+    color: #b3b3b3;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.breadcrumb-link:hover {
+    color: var(--green);
+}
+
+/* Current Page */
+.breadcrumb-current {
+    color: #b5b5b5;
+    font-weight: 700;
+}
+/* ============================================
+   HERO SECTION
+============================================ */
+
+.hero-section {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 60px;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+/* Hero Breadcrumb */
+.hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.hero-breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-breadcrumb-link:hover {
+    color: #a8d5ba;
+}
+
+.hero-home-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.hero-separator {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-current {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   DETAIL SECTION
+============================================ */
+
+.detail-section {
+    padding: 60px 0 80px;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+}
+
+/* ============================================
+   LEFT COLUMN - PROGRAMME INFO
+============================================ */
+
+.detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--green, #2d5f3f);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--green, #2d5f3f);
+    text-transform: uppercase;
+}
+
+.info-row {
+    margin-bottom: 25px;
+}
+
+.info-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--green, #2d5f3f);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.info-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.info-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Date Separator */
+.date-separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.separator-line {
+    flex: 1;
+    height: 2px;
+    background: #e0e0e0;
+}
+
+.separator-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   PROGRESS CARD
+============================================ */
+
+.progress-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green, #2d5f3f);
+    text-transform: uppercase;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.stat-divider {
+    width: 2px;
+    height: 50px;
+    background: #e0e0e0;
+}
+
+/* Progress Bar */
+.progress-bar-wrapper {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 50px;
+    background: #e8f5e9;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green, #2d5f3f) 0%, #4a9d6f 100%);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    transition: width 0.5s ease;
+    min-width: 50px;
+}
+
+.progress-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.progress-message {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   RIGHT COLUMN - DONATION FORM
+============================================ */
+
+.detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.donation-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--green, #2d5f3f);
+}
+
+.donation-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--green, #2d5f3f);
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.donation-subtitle {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.form-input {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+/* UPPERCASE INPUT CLASS */
+.uppercase-input {
+    text-transform: uppercase;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--green, #2d5f3f);
+}
+
+.form-input-file {
+    padding: 10px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.file-note {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.donate-btn {
+    background: linear-gradient(135deg, #daa85dff 0%, #c08329 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.donate-btn:hover {
+    background: #1f4530;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(45, 95, 63, 0.3);
+}
+
+.donation-note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--green, #2d5f3f);
+}
+
+.donation-note p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   SUPPORTERS CARD
+============================================ */
+
+.supporters-card {
+    background: linear-gradient(135deg, var(--green, #2d5f3f) 0%, #4a9d6f 100%);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.supporters-icon {
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.supporters-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.supporters-count {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.supporters-label {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+============================================ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 1000;
+}
+
+.back-to-top-btn {
+    background: var(--green, #2d5f3f);
+    color: #ffffff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.back-to-top-btn:hover {
+    background: #1f4530;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .breadcrumb-inner {
+        padding: 0 40px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr 400px;
+        gap: 30px;
+    }
+    
+    .container {
+        padding: 0 40px;
+    }
+    
+    .hero-content {
+        padding: 0 40px;
+    }
+}
+
+/* Mobile Landscape / Small Tablets */
+@media (max-width: 768px) {
+    .breadcrumb-inner {
+        padding: 0 30px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content {
+        padding: 0 30px;
+    }
+    
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .detail-section {
+        padding: 40px 0 60px;
+    }
+    
+    .info-card,
+    .progress-card,
+    .donation-card {
+        padding: 30px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .breadcrumb-wrapper {
+        margin-top: 60px;
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+
+    .breadcrumb-inner {
+        padding: 0 20px;
+    }
+
+    .breadcrumb-title {
+        font-size: 18px;
+    }
+
+    .breadcrumb-path {
+        font-size: 12px;
+    }
+
+    .breadcrumb-home-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero-section {
+        height: 250px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+    
+    .detail-section {
+        padding: 30px 0 50px;
+    }
+    
+    .info-card,
+    .progress-card,
+    .donation-card {
+        padding: 25px 20px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    .progress-bar {
+        height: 40px;
+    }
+    
+    .progress-text {
+        font-size: 14px;
+    }
+    
+    .donation-title {
+        font-size: 20px;
+    }
+    
+    .donate-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+    
+    .supporters-card {
+        padding: 25px;
+    }
+    
+    .supporters-icon {
+        font-size: 40px;
+    }
+    
+    .supporters-count {
+        font-size: 30px;
+    }
+    
+    .supporters-label {
+        font-size: 14px;
+    }
+    
+    .back-to-top {
+        bottom: 30px;
+    }
+    
+    .back-to-top-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .breadcrumb-title {
+        font-size: 16px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .info-card,
+    .progress-card,
+    .donation-card {
+        padding: 20px 15px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+    
+    .progress-stats {
+        gap: 15px;
+    }
+}

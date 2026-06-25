@@ -1,0 +1,217 @@
+:root {
+  --green: #00542A;
+  --green-dark: #003d1f;
+  --gold: #C08329;
+  --gold-soft: #f4e5b8;
+  --bg: #ffffff;
+  --border: #E5E7EB;
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.ps-wrap,
+.ps-wrap input,
+.ps-wrap select,
+.ps-wrap button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+   EDIT SUBMISSION – PARTICIPATION ADMIN
+========================================= */
+
+/* Page wrapper */
+.ps-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 32px 40px 60px;
+    background: var(--bg);
+}
+
+/* Page title */
+.ps-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+/* Back button */
+.ps-wrap > a.ps-btn-add {
+    background: var(--text-muted);
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.ps-wrap > a.ps-btn-add:hover {
+    background: #4B5563;
+}
+
+/* Breadcrumb */
+.ps-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.ps-breadcrumb a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ps-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Info card */
+.ps-info {
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+
+.ps-info p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.ps-info strong {
+    color: var(--gold);
+}
+
+/* Status form inside info */
+.ps-info label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.ps-info select {
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+/* Section header */
+.ps-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.ps-section-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+/* Add / Save button */
+.ps-btn-add {
+    background: var(--green);
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.ps-btn-add:hover {
+    background: var(--green-dark);
+}
+
+/* Table */
+.ps-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ps-table th {
+    background: #F9FAFB;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+.ps-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.ps-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Inputs */
+.ps-table input {
+    width: 100%;
+    padding: 7px 9px;
+    font-size: 13px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+
+.ps-table input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 1px rgba(0, 84, 42, 0.15);
+}
+
+/* Locked text */
+.ps-table span {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Delete button */
+.ps-btn-delete {
+    background: #DC2626;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ps-btn-delete:hover {
+    background: #B91C1C;
+}
+
+/* Footer spacing */
+.ps-wrap form:last-of-type {
+    margin-bottom: 40px;
+}
